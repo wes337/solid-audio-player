@@ -23,9 +23,7 @@ Or
 
 ```jsx
 import AudioPlayer from 'solid-audio-player'
-import 'solid-audio-player/lib/styles.css'
-// import 'solid-audio-player/lib/styles.less' Use LESS
-// import 'solid-audio-player/src/styles.scss' Use SASS
+import 'solid-audio-player/dist/styles.css'
 
 const Player = () => (
   <AudioPlayer
@@ -125,14 +123,14 @@ Note: `onTimeUpdate` is not supported. Please use `onListen` with `listenInterva
 
 Besides using props to change UI, Solid Audio Player provides built-in class names and SASS/LESS variables for developers to overwrite.
 
-### SASS variables
+### CSS variables
 
-```scss
-$sap_theme-color: #868686 !default; // Color of all buttons and volume/progress indicators
-$sap_background-color: #fff !default; // Color of the player background
-$sap_bar-color: #e4e4e4 !default; // Color of volume and progress bar
-$sap_time-color: #333 !default; // Font color of current time and duration
-$sap_font-family: inherit !default; // Font family of current time and duration
+```less
+--sap_theme-color: #868686; // Color of all buttons and volume/progress indicators
+--sap_background-color: #fff; // Color of the player background
+--sap_bar-color: #e4e4e4; // Color of volume and progress bar
+--sap_time-color: #333; // Font color of current time and duration
+--sap_font-family: inherit; // Font family of current time and duration
 ```
 
 For LESS variables, just replace `$` with `@`. This library supports both.
@@ -150,7 +148,7 @@ There are some status class names on the audio player's wrapper div. They can be
 
 For example:
 
-```scss
+```less
 .sap_play-status--paused .sap_progress-bar {
   // Overwrite the progress bar style while the audio is paused
 }
@@ -164,7 +162,6 @@ You can get direct access to the underlying audio element. First get a ref to So
 
 ```jsx
 let player
-
 ;<SolidAudioPlayer ref={player} />
 ```
 
