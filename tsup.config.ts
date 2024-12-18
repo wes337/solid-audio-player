@@ -6,9 +6,9 @@ const preset_options: preset.PresetOptions = {
     {
       entry: 'src/index.tsx',
     },
+    { name: 'styles', entry: 'src/styles.css' },
   ],
   drop_console: true,
-  cjs: false,
 }
 
 const CI =
