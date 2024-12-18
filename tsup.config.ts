@@ -1,5 +1,4 @@
 import { defineConfig } from 'tsup'
-import { sassPlugin } from 'esbuild-sass-plugin'
 import * as preset from 'tsup-preset-solid'
 
 const preset_options: preset.PresetOptions = {
@@ -31,8 +30,6 @@ export default defineConfig(config => {
     // will update ./package.json with the correct export fields
     preset.writePackageJson(package_fields)
   }
-
-  config.esbuildPlugins = [sassPlugin({ type: 'css' })]
 
   return preset.generateTsupOptions(parsed_options)
 })

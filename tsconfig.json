@@ -16,7 +16,8 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": [],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "rootDir": "."
   },
   "exclude": ["node_modules", "dist", "dev", "tsup.config.ts"]
 }

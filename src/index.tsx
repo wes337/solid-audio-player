@@ -19,7 +19,7 @@ import VolumeBar from './volume-bar'
 import CurrentTime from './current-time'
 import ProgressBar from './progress-bar'
 import Duration from './duration'
-import './styles.scss'
+import './styles.css'
 
 const defaultProps = {
   autoPlay: false,
