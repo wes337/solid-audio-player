@@ -162,12 +162,13 @@ You can get direct access to the underlying audio element. First get a ref to So
 
 ```jsx
 let player
-;<SolidAudioPlayer ref={player} />
+
+return <SolidAudioPlayer ref={player} />
 ```
 
 Then you can access the audio element like this:
 
-`player.audio.current`
+`player.audio`
 
 ### Media Source Extensions and Encrypted Media Extensions
 
