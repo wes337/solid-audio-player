@@ -1,17 +1,17 @@
 {
-  "name": "{{name_of_lib}}",
-  "version": "0.0.0",
-  "description": "{{desc_of_lib}}",
+  "name": "solid-audio-player",
+  "version": "1.0.0",
+  "description": "A customizable SolidJS audio player. Written in TypeScript. Mobile compatible. Keyboard friendly.",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "Wes Moses",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/wes337/solid-audio-player.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/wes337/solid-audio-player#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/wes337/solid-audio-player/issues"
   },
   "files": [
     "dist"
@@ -43,9 +43,6 @@
   "scripts": {
     "dev": "vite serve dev",
     "build": "tsup",
-    "test": "concurrently pnpm:test:*",
-    "test:client": "vitest",
-    "test:ssr": "pnpm run test:client --mode ssr",
     "prepublishOnly": "pnpm build",
     "format": "prettier --ignore-path .gitignore -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
     "lint": "concurrently pnpm:lint:*",
@@ -65,19 +62,26 @@
     "esbuild-plugin-solid": "^0.6.0",
     "eslint": "^8.56.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-no-only-tests": "^3.1.0",
     "jsdom": "^24.0.0",
     "prettier": "3.0.0",
+    "sass": "^1.81.0",
     "solid-js": "^1.8.17",
+    "solid-icons": "^1.1.0",
     "tsup": "^8.0.2",
     "tsup-preset-solid": "^2.2.0",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
-    "vite-plugin-solid": "^2.10.2",
-    "vitest": "^1.6.0"
+    "vite-plugin-solid": "^2.10.2"
   },
   "keywords": [
-    "solid"
+    "solid",
+    "solidjs",
+    "component",
+    "music",
+    "sound",
+    "audio",
+    "player",
+    "mobile"
   ],
   "packageManager": "pnpm@9.1.1",
   "engines": {

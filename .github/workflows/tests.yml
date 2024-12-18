@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build
 
 on:
   push:
@@ -29,11 +29,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      - name: Test
-        run: pnpm run test
-        env:
-          CI: true
 
       - name: Lint
         run: pnpm run lint
