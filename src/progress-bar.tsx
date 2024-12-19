@@ -174,6 +174,8 @@ export default function ProgressBar(props: ProgressBarProps) {
     setState({
       currentTimePos: `${((audio.currentTime / duration) * 100 || 0).toFixed(2)}%`,
     })
+
+    handleAudioDownloadProgressUpdate(event)
   }, props.progressUpdateInterval)
 
   const handleAudioDownloadProgressUpdate = (event: Event): void => {

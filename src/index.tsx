@@ -1,5 +1,5 @@
 import type { JSX } from 'solid-js'
-import { createEffect, mergeProps, onMount, children, Show, For, createSignal } from 'solid-js'
+import { createEffect, mergeProps, onMount, children, Show, For, createSignal, on } from 'solid-js'
 import { Dynamic } from 'solid-js/web'
 import {
   BsPlayCircleFill,
@@ -399,11 +399,8 @@ export default function SolidAudioPlayer(props: PlayerProps) {
     })
   })
 
-  createEffect(() => {
-    if (merged.src && merged.autoPlayAfterSrcChange) {
-      playAudioPromise()
-    }
-  })
+  const autoPlayAfterSrcChange = () => !!merged.src && merged.autoPlayAfterSrcChange
+  createEffect(on(autoPlayAfterSrcChange, () => playAudioPromise(), { defer: true }))
 
   const renderUIModules = (modules: CustomUIModules): JSX.Element => {
     return (

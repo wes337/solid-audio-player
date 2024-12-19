@@ -1,7 +1,6 @@
 import type { Component } from 'solid-js'
 import { createSignal, createMemo } from 'solid-js'
 import AudioPlayer from 'src'
-import 'src/styles.scss'
 
 const CDN_URL = `https://w-img.b-cdn.net/zipp`
 
