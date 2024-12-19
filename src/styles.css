@@ -5,7 +5,6 @@
   --sap_time-color: #333;
   --sap_font-family: inherit;
 }
-
 .sap_container {
   box-sizing: border-box;
   display: flex;
@@ -17,63 +16,49 @@
   background-color: var(--sap_background-color);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 }
-
 .sap_container:focus:not(:focus-visible) {
   outline: 0;
 }
-
 .sap_container svg {
   vertical-align: initial;
 }
-
 .sap_header {
   margin-bottom: 10px;
 }
-
 .sap_footer {
   margin-top: 5px;
 }
-
 .sap_main {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
 }
-
 .sap_stacked .sap_controls-section {
   margin-top: 8px;
 }
-
 .sap_horizontal {
   flex-direction: row;
 }
-
 .sap_horizontal .sap_controls-section {
   margin-left: 8px;
 }
-
 .sap_horizontal-reverse {
   flex-direction: row-reverse;
 }
-
 .sap_horizontal-reverse .sap_controls-section {
   margin-right: 8px;
 }
-
 .sap_stacked-reverse {
   flex-direction: column-reverse;
 }
-
 .sap_stacked-reverse .sap_controls-section {
   margin-bottom: 8px;
 }
-
 .sap_progress-section {
   display: flex;
   flex: 3 1 auto;
   align-items: center;
 }
-
 .sap_progress-container {
   display: flex;
   align-items: center;
@@ -85,18 +70,15 @@
   user-select: none;
   -webkit-user-select: none;
 }
-
 .sap_progress-container:focus:not(:focus-visible) {
   outline: 0;
 }
-
 .sap_time {
   color: var(--sap_time-color);
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
 }
-
 .sap_progress-bar {
   box-sizing: border-box;
   position: relative;
@@ -106,7 +88,6 @@
   background-color: var(--sap_bar-color);
   border-radius: 2px;
 }
-
 .sap_progress-filled {
   height: 100%;
   position: absolute;
@@ -114,11 +95,9 @@
   background-color: var(--sap_theme-color);
   border-radius: 2px;
 }
-
 .sap_progress-bar-show-download {
   background-color: rgba(var(--sap_bar-color));
 }
-
 .sap_download-progress {
   height: 100%;
   position: absolute;
@@ -126,7 +105,6 @@
   background-color: var(--sap_bar-color);
   border-radius: 2px;
 }
-
 .sap_progress-indicator {
   box-sizing: border-box;
   position: absolute;
@@ -139,20 +117,17 @@
   border-radius: 50px;
   box-shadow: rgba(var(--sap_theme-color)) 0 0 5px;
 }
-
 .sap_controls-section {
   display: flex;
   flex: 1 1 auto;
   justify-content: space-between;
   align-items: center;
 }
-
 .sap_additional-controls {
   display: flex;
   flex: 1 0 auto;
   align-items: center;
 }
-
 .sap_repeat-button {
   font-size: 26px;
   width: 26px;
@@ -160,14 +135,12 @@
   color: var(--sap_theme-color);
   margin-right: 6px;
 }
-
 .sap_main-controls {
   flex: 0 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .sap_main-controls-button {
   margin: 0 3px;
   color: var(--sap_theme-color);
@@ -175,20 +148,17 @@
   width: 35px;
   height: 35px;
 }
-
 .sap_play-pause-button {
   font-size: 40px;
   width: 40px;
   height: 40px;
 }
-
 .sap_volume-controls {
   display: flex;
   flex: 1 0 auto;
   justify-content: flex-end;
   align-items: center;
 }
-
 .sap_volume-button {
   flex: 0 0 26px;
   font-size: 26px;
@@ -197,7 +167,6 @@
   color: var(--sap_theme-color);
   margin-right: 6px;
 }
-
 .sap_volume-container {
   display: flex;
   align-items: center;
@@ -205,7 +174,6 @@
   user-select: none;
   -webkit-user-select: none;
 }
-
 .sap_volume-bar-area {
   display: flex;
   align-items: center;
@@ -213,11 +181,9 @@
   height: 14px;
   cursor: pointer;
 }
-
 .sap_volume-bar-area:focus:not(:focus-visible) {
   outline: 0;
 }
-
 .sap_volume-bar {
   box-sizing: border-box;
   position: relative;
@@ -226,7 +192,6 @@
   background: var(--sap_bar-color);
   border-radius: 2px;
 }
-
 .sap_volume-indicator {
   box-sizing: border-box;
   position: absolute;
@@ -241,11 +206,9 @@
   box-shadow: rgba(var(--sap_theme-color)) 0 0 3px;
   cursor: pointer;
 }
-
 .sap_volume-indicator:hover {
   opacity: 0.9;
 }
-
 .sap_volume-filled {
   height: 100%;
   position: absolute;
@@ -253,25 +216,20 @@
   background-color: var(--sap_theme-color);
   border-radius: 2px;
 }
-
-/* Utils */
 .sap_button-clear {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   padding: 0;
   overflow: hidden;
   cursor: pointer;
 }
-
 .sap_button-clear:hover {
   opacity: 0.9;
   transition-duration: 0.2s;
 }
-
 .sap_button-clear:active {
   opacity: 0.95;
 }
-
 .sap_button-clear:focus:not(:focus-visible) {
   outline: 0;
 }
