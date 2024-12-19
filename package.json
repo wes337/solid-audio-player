@@ -1,6 +1,6 @@
 {
   "name": "solid-audio-player",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A customizable SolidJS audio player. Written in TypeScript. Mobile compatible. Keyboard friendly.",
   "license": "MIT",
   "author": "Wes Moses",
@@ -14,7 +14,8 @@
     "url": "https://github.com/wes337/solid-audio-player/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "public"
   ],
   "private": false,
   "sideEffects": false,
@@ -28,13 +29,15 @@
     "import": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./styles": {
+      "scss": "./src/styles.scss"
     }
   },
   "typesVersions": {},
   "scripts": {
     "dev": "vite serve dev",
-    "build": "tsup && sass src/styles.scss dist/styles.css --style=compressed",
-    "build:styles": "sass src/styles.scss dist/styles.css --style=compressed",
+    "build": "sass src/styles.scss public/styles.css --style=compressed && tsup",
     "lint:types": "tsc --noEmit",
     "update-deps": "pnpm up -Li"
   },
@@ -51,6 +54,7 @@
     "eslint": "^9.17.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
     "prettier": "3.0.0",
     "sass": "^1.83.0",
     "solid-icons": "^1.1.0",

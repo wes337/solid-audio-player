@@ -30,5 +30,7 @@ export default defineConfig(config => {
     preset.writePackageJson(package_fields)
   }
 
+  config.publicDir = true
+
   return preset.generateTsupOptions(parsed_options)
 })
