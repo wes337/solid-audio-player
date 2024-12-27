@@ -1,6 +1,6 @@
 {
   "name": "solid-audio-player",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A customizable SolidJS audio player. Written in TypeScript. Mobile compatible. Keyboard friendly.",
   "license": "MIT",
   "author": "Wes Moses",
