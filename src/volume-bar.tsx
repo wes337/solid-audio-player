@@ -3,7 +3,7 @@ import { VolumeBarProps, VolumePosInfo } from './types'
 import { getPosX } from './utils'
 
 export default function VolumeBar(props: VolumeBarProps) {
-  const volume = () => (props.volume == undefined ? 1 : props.volume)
+  const volume = () => (props.volume == null ? 1 : props.volume)
 
   const [hasVolumeAnimation, setHasVolumeAnimation] = createSignal(false)
   const [isDraggingVolume, setIsDraggingVolume] = createSignal(false)
@@ -57,19 +57,6 @@ export default function VolumeBar(props: VolumeBarProps) {
     event.preventDefault()
   }
 
-  const handleClickVolumeButton = (): void => {
-    if (!props.audio) {
-      return
-    }
-
-    if (props.audio.volume > 0) {
-      lastVolume = props.audio.volume
-      props.audio.volume = 0
-    } else {
-      props.audio.volume = lastVolume
-    }
-  }
-
   const handleVolumeControlMouseOrTouchDown = (event: MouseEvent | TouchEvent): void => {
     event.stopPropagation()
 
@@ -82,6 +69,8 @@ export default function VolumeBar(props: VolumeBarProps) {
 
     setIsDraggingVolume(true)
     setCurrentVolumePos(currentVolumePos)
+
+    props.onVolumeChange?.(currentVolume)
 
     if (event instanceof MouseEvent) {
       window.addEventListener('mousemove', handleWindowMouseOrTouchMove)

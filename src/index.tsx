@@ -288,7 +288,7 @@ export default function SolidAudioPlayer(props: PlayerProps) {
     if (merged.muted) {
       audio.volume = 0
     } else {
-      audio.volume = lastVolume || defaultProps.volume
+      audio.volume = lastVolume != null ? lastVolume : defaultProps.volume
     }
 
     audio.addEventListener('error', e => {
@@ -414,6 +414,16 @@ export default function SolidAudioPlayer(props: PlayerProps) {
         }}
       </For>
     )
+  }
+
+  const onVolumeChange = (volume: number) => {
+    if (!audio) {
+      return
+    }
+
+    setVolume(volume)
+    lastVolume = audio.volume
+    audio.volume = volume
   }
 
   const defaultDuration = () => merged.defaultDuration || defaultProps.defaultDuration
@@ -581,7 +591,7 @@ export default function SolidAudioPlayer(props: PlayerProps) {
           <VolumeBar
             audio={audio}
             volume={volume()}
-            // onMuteChange={handleMuteChange}
+            onVolumeChange={onVolumeChange}
             showFilledVolume={showFilledVolume()}
             i18nVolumeControl={merged.i18nAriaLabels?.volumeControl}
           />

@@ -233,3 +233,14 @@
 .sap_button-clear:focus:not(:focus-visible) {
   outline: 0;
 }
+@media (pointer: none), (pointer: coarse) {
+  .sap_volume-controls {
+    display: none;
+  }
+  .sap_additional-controls {
+    position: absolute;
+  }
+  .sap_main-controls {
+    width: 100%;
+  }
+}

@@ -173,6 +173,7 @@ export interface VolumeBarProps {
   audio?: HTMLAudioElement
   volume?: number
   onMuteChange?: () => void
+  onVolumeChange?: (volume: number) => void
   showFilledVolume: boolean
   i18nVolumeControl?: string
 }
